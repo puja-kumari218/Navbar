@@ -1,0 +1,122 @@
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: rgb(132, 36, 1);
+  color: black;
+  line-height: 1.6;
+  font-size: 16px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+
+
+/* nav */
+nav {
+  background: #fff;
+  box-shadow: 0 4px 14px rgb(15, 14, 14);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: rgb(231, 155, 128);
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: rgb(219, 123, 59);
+  transform: rotate(90deg);
+}
+.logo {
+  height: 45px;
+}
+.links a {
+  color: rgb(138, 50, 2);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  display: block;
+  padding: 10px 5px;
+  transition: all 0.3s;
+}
+.links a:hover {
+  background:  #3d2626;
+  color: rgb(138, 50, 2);
+  padding-left: 1.5rem;
+}
+.social-icons {
+  display: none;
+}
+
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.show-links {
+  height: 12rem;
+}
+@media screen and (min-width: 900px) {
+  .nav-center {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.6rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 1rem;
+    color: rgb(138, 50, 2);
+    transition: all 0.4s;
+  }
+  .social-icons a:hover {
+    color: #3d2626;
+  }
+}
